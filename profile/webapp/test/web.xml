@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <context-param>
+        <param-name>profile</param-name>
+        <param-value>test</param-value>
+    </context-param>
+
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>All</web-resource-name>
+            <url-pattern>/rest/*</url-pattern>
+        </web-resource-collection>
+
+        <auth-constraint>
+            <role-name>*</role-name>
+        </auth-constraint>
+
+        <user-data-constraint>
+            <transport-guarantee>NONE</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+
+    <!-- Список всех ролей -->
+    <security-role>
+        <role-name>admin</role-name>
+    </security-role>
+
+    <security-role>
+        <role-name>user</role-name>
+    </security-role>
+
+    <security-role>
+        <role-name>olzhas</role-name>
+    </security-role>
+</web-app>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomee>
+    <Resource id="datasource" type="javax.sql.DataSource">
+        username = postgres
+        password = postgres
+        passwordCipher = PlainText
+        jdbcDriver = org.postgresql.Driver
+        jdbcUrl = jdbc:postgresql://localhost:5432/sender
+        maxActive = 20
+        maxIdle = 20
+        jtaManaged = true
+    </Resource>
+
+    <Resource id="mail" type="javax.mail.Session">
+        mail.smtp.socketFactory.class=javax.net.ssl.SSLSocketFactory
+        mail.smtp.socketFactory.fallback=false
+        mail.smtp.host=smtp.gmail.com
+        mail.smtp.port=465
+        mail.transport.protocol=smtp
+        mail.smtp.auth=true
+        mail.smtp.user=javamailtest149@gmail.com
+        password=javamailtest1491
+    </Resource>
+</tomee>
+

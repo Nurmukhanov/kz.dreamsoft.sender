@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomee>
+    <Resource id="datasource" type="javax.sql.DataSource">
+        userName = sa
+        password =
+        passwordCipher = PlainText
+        jdbcDriver = org.hsqldb.jdbcDriver
+        jdbcUrl = jdbc:hsqldb:mem:dev
+        maxActive = 20
+        maxIdle = 20
+        jtaManaged = true
+    </Resource>
+    <Resource id="mail" type="javax.mail.Session">
+        mail.smtp.socketFactory.class=javax.net.ssl.SSLSocketFactory
+        mail.smtp.socketFactory.fallback=false
+        mail.smtp.host=smtp.gmail.com
+        mail.smtp.port=465
+        mail.transport.protocol=smtp
+        mail.smtp.auth=true
+        mail.smtp.user=javamailtest149@gmail.com
+        password=javamailtest1491
+    </Resource>
+</tomee>
